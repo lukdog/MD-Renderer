@@ -2,9 +2,28 @@
 
 .App {
     @extend %arduino-typography-medium;
+    @extend %ardu-pagination ;
 
     input {
         @extend %ardu-input;
         width:50%
+    }
+
+    .metadata {
+
+        margin: 20px 0;
+        padding: 40px 10px;
+        background: rgb(151, 147, 147);
+        width: calc(100% - 20px);
+
+        .metadata__title {
+            @extend %arduino-typography-x-large-strong;
+            text-align: center;
+        }
+
+        .metadata__difficulty {
+            @extend %arduino-typography-x-small-strong;
+            text-align: center;
+        }
     }
 }

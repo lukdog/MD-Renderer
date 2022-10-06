@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       '~arduino-sass': path.resolve(__dirname, 'node_modules/arduino-sass'),
       '~github-md-css': path.resolve(__dirname, 'node_modules/github-markdown-css'),
+      '~airmd': path.resolve(__dirname, 'node_modules/markdown-air'),
     }
   },
 })

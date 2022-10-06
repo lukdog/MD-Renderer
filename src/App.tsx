@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Classnames from 'classnames'
-import {DebounceInput} from 'react-debounce-input';
+import {DebounceInput} from 'react-debounce-input'
 import metadataParser from 'markdown-yaml-metadata-parser'
 import remarkGfm from 'remark-gfm'
 
 import './App.scss'
 import '~github-md-css/github-markdown.css'
+import Metadata from './Metadata'
+/*import '~airmd/css/air.css'*/
 
 const isUrl = (url: string) => {
   let parsed: URL;
@@ -50,7 +52,8 @@ function App() {
 
   return (
     <div className="App">
-      <DebounceInput type="text" debounceTImeout={500} onChange={OnTextChange}/>
+      <DebounceInput type="text" debounceTimeout={500} onChange={OnTextChange}/>
+      <Metadata {...metadata} className="metadata"/>
       <ReactMarkdown children={text} remarkPlugins={[remarkGfm]} transformImageUri={trasformImageUrl} className={Classnames('markdown-body')}/>
     </div>
   )
