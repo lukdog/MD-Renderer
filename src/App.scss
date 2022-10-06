@@ -1,0 +1,10 @@
+@import '~arduino-sass/src/arduino-sass';
+
+.App {
+    @extend %arduino-typography-medium;
+
+    input {
+        @extend %ardu-input;
+        width:50%
+    }
+}
